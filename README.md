@@ -1,0 +1,2 @@
+# WeDOCare
+WeDOCare wellness application
