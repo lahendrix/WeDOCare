@@ -1,3 +1,6 @@
+const BASE_URL = "https://a208h8fgml.execute-api.us-east-1.amazonaws.com/dev/"
+const DIAGNOSIS_PATH = "diagnosis"
+
 class Api {
   static headers() {
     return {
@@ -25,11 +28,12 @@ class Api {
 
   static xhr(route, params, verb) {
     const host = 'http://www.recipepuppy.com'
-    const url = `${host}${route}`
+    const url = BASE_URL //`${host}${route}`
     let options = Object.assign({ method: verb }, params ? { body: JSON.stringify(params) } : null );
     options.headers = Api.headers()
     return fetch(url, options).then( resp => {
       let json = resp.json();
+      console.log("response json", json);
       if (resp.ok) {
         return json
       }

@@ -3,6 +3,7 @@ import { View, StatusBar } from 'react-native'
 import { Provider } from 'react-redux'
 import NavigationRouter from './navigation/navigationRouter'
 
+
 export default class Root extends React.Component {
 
   render () {
