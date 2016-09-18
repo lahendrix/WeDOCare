@@ -48,6 +48,7 @@ class Home extends Component {
           contentContainerStyle={styles.listContent}
           dataSource={this.props.dataSource}
           renderRow={this.renderRow.bind(this)}
+          renderSeparator={(sectionId, rowId) => <View key={rowId} style={styles.separator} />}
         />
       </View>
     )

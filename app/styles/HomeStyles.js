@@ -27,5 +27,9 @@ export default StyleSheet.create({
   },
   listContent: {
     marginTop: Metrics.baseMargin
-  }
+  },
+  separator: {
+    height: 1,
+    backgroundColor: '#8E8E8E',
+  },
 })
