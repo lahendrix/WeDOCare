@@ -11,12 +11,12 @@ export function fetchDiagnoses() {
 			responseType: 'json'
 		})
 		.then(function(response) {
-      console.log("received diagnosis");
 			dispatch(receiveDiagnoses(response.data));
 		})
 		.catch(function(response){
 			console.log("error retrieving diagnoses");
       console.log(response);
+      dispatch(requestDiagnosesError(response))
 		})
   }
 }
@@ -31,5 +31,12 @@ export function receiveDiagnoses (diagnoses) {
   return {
     type: types.DIAGNOSES_GET_SUCCESS,
     diagnoses,
+  }
+}
+
+export function requestDiagnosesError (error) {
+  return {
+    type: types.DIAGNOSES_GET_ERROR,
+    error,
   }
 }
