@@ -40,14 +40,6 @@
           {
             "AttributeName": "diagnosis_date",
             "AttributeType": "S"
-          },
-          {
-            "AttributeName": "description",
-            "AttributeType": "S"
-          },
-          {
-            "AttributeName": "notes",
-            "AttributeType": "S"
           }
         ],
         "KeySchema": [
