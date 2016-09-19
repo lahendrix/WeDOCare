@@ -1,0 +1,10 @@
+{
+  "name": "lhendrix_WeDoCare",
+  "description": "Larry Hendrix WeDoCare application",
+  "runtime": "nodejs4.3",
+  "memory": 128,
+  "timeout": 5,
+  "role": "",
+  "nameTemplate": "{{.Project.Name}}_{{.Function.Name}}",
+  "environment": {}
+}
