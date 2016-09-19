@@ -1,0 +1,228 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Description": "IHG Bot AWS Resource Creation",
+  "Parameters": {
+    "Environment": {
+      "Description": "Select environment DEV, QA, PROD",
+      "Type": "String",
+      "Default": "dev",
+      "AllowedValues": [
+        "dev",
+        "qa",
+        "prod"
+      ]
+    }
+  },
+  "Resources": {
+    "DiagnosisTable": {
+      "Type": "AWS::DynamoDB::Table",
+      "Properties": {
+        "ProvisionedThroughput": {
+          "ReadCapacityUnits": "5",
+          "WriteCapacityUnits": "5"
+        },
+        "TableName": {
+          "Fn::Join": [
+            "",
+            [
+              "Hendrix_WeDoCare_diagnosis",
+              {
+                "Ref": "Environment"
+              }
+            ]
+          ]
+        },
+        "AttributeDefinitions": [
+          {
+            "AttributeName": "patient_id",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "diagnosis_date",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "description",
+            "AttributeType": "S"
+          },
+          {
+            "AttributeName": "notes",
+            "AttributeType": "S"
+          }
+        ],
+        "KeySchema": [
+          {
+            "AttributeName": "patient_id",
+            "KeyType": "HASH"
+          },
+          {
+            "AttributeName": "diagnosis_date",
+            "KeyType": "RANGE"
+          }
+        ]
+      }
+    },
+
+    "LambdaExecutionRole": {
+      "Type": "AWS::IAM::Role",
+      "Properties": {
+        "AssumeRolePolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Principal": {
+                "Service": [
+                  "lambda.amazonaws.com"
+                ]
+              },
+              "Action": [
+                "sts:AssumeRole"
+              ]
+            }
+          ]
+        },
+        "Path": "/"
+      }
+    },
+    "LambdaDynamoAccess": {
+      "Type": "AWS::IAM::ManagedPolicy",
+      "Properties": {
+        "Description": "LambdaDynamoPolicy",
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "dynamodb:DescribeStream",
+                "dynamodb:GetRecords",
+                "dynamodb:GetShardIterator",
+                "dynamodb:ListStreams",
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+              ],
+              "Resource": "*"
+            }
+          ]
+        },
+        "Roles": [
+          {
+            "Ref": "LambdaExecutionRole"
+          }
+        ]
+      },
+      "DependsOn": "LambdaExecutionRole"
+    },
+
+    "LambdaFullAccess": {
+      "Type": "AWS::IAM::ManagedPolicy",
+      "Properties": {
+        "Description": "LambdaDynamoPolicy",
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "cloudwatch:*",
+                "cognito-identity:ListIdentityPools",
+                "cognito-sync:GetCognitoEvents",
+                "cognito-sync:SetCognitoEvents",
+                "dynamodb:*",
+                "events:*",
+                "iam:ListAttachedRolePolicies",
+                "iam:ListRolePolicies",
+                "iam:ListRoles",
+                "iam:PassRole",
+                "kinesis:DescribeStream",
+                "kinesis:ListStreams",
+                "kinesis:PutRecord",
+                "lambda:*",
+                "logs:*",
+                "s3:*",
+                "sns:ListSubscriptions",
+                "sns:ListSubscriptionsByTopic",
+                "sns:ListTopics",
+                "sns:Subscribe",
+                "sns:Unsubscribe",
+                "ec2:DescribeVpcs",
+                "ec2:DescribeSubnets",
+                "ec2:DescribeSecurityGroups",
+                "iot:GetTopicRule",
+                "iot:ListTopicRules",
+                "iot:CreateTopicRule",
+                "iot:ReplaceTopicRule",
+                "iot:AttachPrincipalPolicy",
+                "iot:AttachThingPrincipal",
+                "iot:CreateKeysAndCertificate",
+                "iot:CreatePolicy",
+                "iot:CreateThing",
+                "iot:ListPolicies",
+                "iot:ListThings",
+                "iot:DescribeEndpoint"
+              ],
+              "Resource": "*"
+            }
+          ]
+        },
+        "Roles": [
+          {
+            "Ref": "LambdaExecutionRole"
+          }
+        ]
+      },
+      "DependsOn": "LambdaExecutionRole"
+    },
+    "LambdaWeDoCare": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "FunctionName": {
+          "Fn::Join": [
+            "",
+            [
+              "lhendrix_WeDoCare_getDiagnoses_",
+              {
+                "Ref": "Environment"
+              }
+            ]
+          ]
+        },
+        "Handler": "_apex_index.handle",
+        "Role": {
+          "Fn::GetAtt": [
+            "LambdaExecutionRole",
+            "Arn"
+          ]
+        },
+        "Code": {
+          "ZipFile": {
+            "Fn::Join": [
+              "",
+              [
+                "var response = require('cfn-response');",
+                "exports.handler = function(event, context) {",
+                "   var responseData = {Value: event.ResourceProperties.List};",
+                "   responseData.Value.push(event.ResourceProperties.AppendedItem);",
+                "   response.send(event, context, response.SUCCESS, responseData);",
+                "};"
+              ]
+            ]
+          }
+        },
+        "Runtime": "nodejs4.3",
+        "MemorySize": 512,
+        "Timeout": 10
+      }
+    }
+  },
+  "Outputs": {
+    "DiagnosisTable": {
+      "Description": "Table for diagnosis information",
+      "Value": {
+        "Ref": "DiagnosisTable"
+      }
+    }
+  }
+}
