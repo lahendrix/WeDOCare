@@ -1,0 +1,516 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D57CE1811DA4463400793D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57CE1801DA4463400793D39 /* AppDelegate.swift */; };
+		D57CE1831DA4463400793D39 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57CE1821DA4463400793D39 /* MasterViewController.swift */; };
+		D57CE1851DA4463400793D39 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57CE1841DA4463400793D39 /* DetailViewController.swift */; };
+		D57CE1881DA4463400793D39 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57CE1861DA4463400793D39 /* Main.storyboard */; };
+		D57CE18A1DA4463400793D39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D57CE1891DA4463400793D39 /* Assets.xcassets */; };
+		D57CE18D1DA4463400793D39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D57CE18B1DA4463400793D39 /* LaunchScreen.storyboard */; };
+		D57CE1981DA4463400793D39 /* HendrixCatalyzeAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57CE1971DA4463400793D39 /* HendrixCatalyzeAppTests.swift */; };
+		D57CE1A31DA4463400793D39 /* HendrixCatalyzeAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57CE1A21DA4463400793D39 /* HendrixCatalyzeAppUITests.swift */; };
+		D57CE1B11DA450FC00793D39 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D57CE1B01DA450FC00793D39 /* LoginViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D57CE1941DA4463400793D39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D57CE1751DA4463400793D39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D57CE17C1DA4463400793D39;
+			remoteInfo = HendrixCatalyzeApp;
+		};
+		D57CE19F1DA4463400793D39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D57CE1751DA4463400793D39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D57CE17C1DA4463400793D39;
+			remoteInfo = HendrixCatalyzeApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D57CE17D1DA4463400793D39 /* HendrixCatalyzeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HendrixCatalyzeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D57CE1801DA4463400793D39 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D57CE1821DA4463400793D39 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		D57CE1841DA4463400793D39 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D57CE1871DA4463400793D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D57CE1891DA4463400793D39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D57CE18C1DA4463400793D39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D57CE18E1DA4463400793D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D57CE1931DA4463400793D39 /* HendrixCatalyzeAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HendrixCatalyzeAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D57CE1971DA4463400793D39 /* HendrixCatalyzeAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HendrixCatalyzeAppTests.swift; sourceTree = "<group>"; };
+		D57CE1991DA4463400793D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D57CE19E1DA4463400793D39 /* HendrixCatalyzeAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HendrixCatalyzeAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D57CE1A21DA4463400793D39 /* HendrixCatalyzeAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HendrixCatalyzeAppUITests.swift; sourceTree = "<group>"; };
+		D57CE1A41DA4463400793D39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D57CE1B01DA450FC00793D39 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D57CE17A1DA4463400793D39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D57CE1901DA4463400793D39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D57CE19B1DA4463400793D39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D57CE1741DA4463400793D39 = {
+			isa = PBXGroup;
+			children = (
+				D57CE17F1DA4463400793D39 /* HendrixCatalyzeApp */,
+				D57CE1961DA4463400793D39 /* HendrixCatalyzeAppTests */,
+				D57CE1A11DA4463400793D39 /* HendrixCatalyzeAppUITests */,
+				D57CE17E1DA4463400793D39 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D57CE17E1DA4463400793D39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D57CE17D1DA4463400793D39 /* HendrixCatalyzeApp.app */,
+				D57CE1931DA4463400793D39 /* HendrixCatalyzeAppTests.xctest */,
+				D57CE19E1DA4463400793D39 /* HendrixCatalyzeAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D57CE17F1DA4463400793D39 /* HendrixCatalyzeApp */ = {
+			isa = PBXGroup;
+			children = (
+				D57CE1801DA4463400793D39 /* AppDelegate.swift */,
+				D57CE1821DA4463400793D39 /* MasterViewController.swift */,
+				D57CE1841DA4463400793D39 /* DetailViewController.swift */,
+				D57CE1861DA4463400793D39 /* Main.storyboard */,
+				D57CE1B01DA450FC00793D39 /* LoginViewController.swift */,
+				D57CE1891DA4463400793D39 /* Assets.xcassets */,
+				D57CE18B1DA4463400793D39 /* LaunchScreen.storyboard */,
+				D57CE18E1DA4463400793D39 /* Info.plist */,
+			);
+			path = HendrixCatalyzeApp;
+			sourceTree = "<group>";
+		};
+		D57CE1961DA4463400793D39 /* HendrixCatalyzeAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				D57CE1971DA4463400793D39 /* HendrixCatalyzeAppTests.swift */,
+				D57CE1991DA4463400793D39 /* Info.plist */,
+			);
+			path = HendrixCatalyzeAppTests;
+			sourceTree = "<group>";
+		};
+		D57CE1A11DA4463400793D39 /* HendrixCatalyzeAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D57CE1A21DA4463400793D39 /* HendrixCatalyzeAppUITests.swift */,
+				D57CE1A41DA4463400793D39 /* Info.plist */,
+			);
+			path = HendrixCatalyzeAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D57CE17C1DA4463400793D39 /* HendrixCatalyzeApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D57CE1A71DA4463400793D39 /* Build configuration list for PBXNativeTarget "HendrixCatalyzeApp" */;
+			buildPhases = (
+				D57CE1791DA4463400793D39 /* Sources */,
+				D57CE17A1DA4463400793D39 /* Frameworks */,
+				D57CE17B1DA4463400793D39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HendrixCatalyzeApp;
+			productName = HendrixCatalyzeApp;
+			productReference = D57CE17D1DA4463400793D39 /* HendrixCatalyzeApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D57CE1921DA4463400793D39 /* HendrixCatalyzeAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D57CE1AA1DA4463400793D39 /* Build configuration list for PBXNativeTarget "HendrixCatalyzeAppTests" */;
+			buildPhases = (
+				D57CE18F1DA4463400793D39 /* Sources */,
+				D57CE1901DA4463400793D39 /* Frameworks */,
+				D57CE1911DA4463400793D39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D57CE1951DA4463400793D39 /* PBXTargetDependency */,
+			);
+			name = HendrixCatalyzeAppTests;
+			productName = HendrixCatalyzeAppTests;
+			productReference = D57CE1931DA4463400793D39 /* HendrixCatalyzeAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D57CE19D1DA4463400793D39 /* HendrixCatalyzeAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D57CE1AD1DA4463400793D39 /* Build configuration list for PBXNativeTarget "HendrixCatalyzeAppUITests" */;
+			buildPhases = (
+				D57CE19A1DA4463400793D39 /* Sources */,
+				D57CE19B1DA4463400793D39 /* Frameworks */,
+				D57CE19C1DA4463400793D39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D57CE1A01DA4463400793D39 /* PBXTargetDependency */,
+			);
+			name = HendrixCatalyzeAppUITests;
+			productName = HendrixCatalyzeAppUITests;
+			productReference = D57CE19E1DA4463400793D39 /* HendrixCatalyzeAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D57CE1751DA4463400793D39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Mobiquity Inc";
+				TargetAttributes = {
+					D57CE17C1DA4463400793D39 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = GS86NCENM6;
+					};
+					D57CE1921DA4463400793D39 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = D57CE17C1DA4463400793D39;
+					};
+					D57CE19D1DA4463400793D39 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = D57CE17C1DA4463400793D39;
+					};
+				};
+			};
+			buildConfigurationList = D57CE1781DA4463400793D39 /* Build configuration list for PBXProject "HendrixCatalyzeApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D57CE1741DA4463400793D39;
+			productRefGroup = D57CE17E1DA4463400793D39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D57CE17C1DA4463400793D39 /* HendrixCatalyzeApp */,
+				D57CE1921DA4463400793D39 /* HendrixCatalyzeAppTests */,
+				D57CE19D1DA4463400793D39 /* HendrixCatalyzeAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D57CE17B1DA4463400793D39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D57CE18D1DA4463400793D39 /* LaunchScreen.storyboard in Resources */,
+				D57CE18A1DA4463400793D39 /* Assets.xcassets in Resources */,
+				D57CE1881DA4463400793D39 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D57CE1911DA4463400793D39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D57CE19C1DA4463400793D39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D57CE1791DA4463400793D39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D57CE1B11DA450FC00793D39 /* LoginViewController.swift in Sources */,
+				D57CE1851DA4463400793D39 /* DetailViewController.swift in Sources */,
+				D57CE1831DA4463400793D39 /* MasterViewController.swift in Sources */,
+				D57CE1811DA4463400793D39 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D57CE18F1DA4463400793D39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D57CE1981DA4463400793D39 /* HendrixCatalyzeAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D57CE19A1DA4463400793D39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D57CE1A31DA4463400793D39 /* HendrixCatalyzeAppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D57CE1951DA4463400793D39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D57CE17C1DA4463400793D39 /* HendrixCatalyzeApp */;
+			targetProxy = D57CE1941DA4463400793D39 /* PBXContainerItemProxy */;
+		};
+		D57CE1A01DA4463400793D39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D57CE17C1DA4463400793D39 /* HendrixCatalyzeApp */;
+			targetProxy = D57CE19F1DA4463400793D39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D57CE1861DA4463400793D39 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D57CE1871DA4463400793D39 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D57CE18B1DA4463400793D39 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D57CE18C1DA4463400793D39 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D57CE1A51DA4463400793D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D57CE1A61DA4463400793D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D57CE1A81DA4463400793D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = HendrixCatalyzeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobiquityinc.hendrixcatalyze;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D57CE1A91DA4463400793D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = HendrixCatalyzeApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobiquityinc.hendrixcatalyze;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D57CE1AB1DA4463400793D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HendrixCatalyzeAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobiquityinc.larryhendrix.HendrixCatalyzeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HendrixCatalyzeApp.app/HendrixCatalyzeApp";
+			};
+			name = Debug;
+		};
+		D57CE1AC1DA4463400793D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HendrixCatalyzeAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobiquityinc.larryhendrix.HendrixCatalyzeAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HendrixCatalyzeApp.app/HendrixCatalyzeApp";
+			};
+			name = Release;
+		};
+		D57CE1AE1DA4463400793D39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HendrixCatalyzeAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobiquityinc.larryhendrix.HendrixCatalyzeAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HendrixCatalyzeApp;
+			};
+			name = Debug;
+		};
+		D57CE1AF1DA4463400793D39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HendrixCatalyzeAppUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mobiquityinc.larryhendrix.HendrixCatalyzeAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HendrixCatalyzeApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D57CE1781DA4463400793D39 /* Build configuration list for PBXProject "HendrixCatalyzeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D57CE1A51DA4463400793D39 /* Debug */,
+				D57CE1A61DA4463400793D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D57CE1A71DA4463400793D39 /* Build configuration list for PBXNativeTarget "HendrixCatalyzeApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D57CE1A81DA4463400793D39 /* Debug */,
+				D57CE1A91DA4463400793D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D57CE1AA1DA4463400793D39 /* Build configuration list for PBXNativeTarget "HendrixCatalyzeAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D57CE1AB1DA4463400793D39 /* Debug */,
+				D57CE1AC1DA4463400793D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D57CE1AD1DA4463400793D39 /* Build configuration list for PBXNativeTarget "HendrixCatalyzeAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D57CE1AE1DA4463400793D39 /* Debug */,
+				D57CE1AF1DA4463400793D39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D57CE1751DA4463400793D39 /* Project object */;
+}
